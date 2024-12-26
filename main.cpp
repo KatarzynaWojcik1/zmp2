@@ -27,7 +27,7 @@ int main() {
     std::cout << "---" << std::endl;
     log.showlogs();
 
-    std::cout << "both log and log2 caontain the same values" << std::endl;
+    std::cout << "Both log and log2 contain the same values" << std::endl;
 
     return 0;
 }

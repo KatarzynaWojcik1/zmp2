@@ -12,6 +12,7 @@ typedef enum log_type
     logtype_info
 } log_type;
 
+// Log interface class for deriving concrete log classes
 class Log {
     public:
     log_type type;
@@ -30,7 +31,7 @@ class LogError : public Log{
 // Concrete product class - LogWarning
 class LogWarning : public Log{
     public: 
-    LogWarning(std::string message){
+    LogWarning(std::string message){   
         type = logtype_warning;
         msg = message;
     }

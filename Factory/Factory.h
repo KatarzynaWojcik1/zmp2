@@ -4,11 +4,12 @@
 #include <string>
 #include "../Log/Log.cpp"
 
+// Log Factory class
 class LogFactory {
 public:
-    LogFactory(){}
-    Log* createLog_Factory(log_type type, std::string msg) ;
-    ~LogFactory() {}
+    LogFactory(){} // Constructor for the LogFactory class
+    Log* createLog_Factory(log_type type, std::string msg); // Function to create a log object based on the log type
+    ~LogFactory() {} // Destructor for the LogFactory class
  
 };
 
