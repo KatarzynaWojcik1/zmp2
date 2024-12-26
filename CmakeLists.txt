@@ -1,0 +1,33 @@
+cmake_minimum_required(VERSION 3.10)
+
+# Set the project name
+project(LoggerSystem)
+
+# Specify the C++ standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Add the Logger library
+add_library(Logger
+    Logger/Logger.cpp
+    Logger/Logger.h
+)
+
+# Add the Log library
+add_library(Log
+       Log/Log.cpp
+)
+
+# Add the Factory library
+add_library(Factory
+    Factory/Factory.cpp
+    Factory/Factory.h
+)
+
+# Add the executable
+add_executable(main
+    main.cpp
+)
+
+# Link the libraries to the executable
+target_link_libraries(main Logger Log Factory)
